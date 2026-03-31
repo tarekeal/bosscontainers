@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs><linearGradient id="b8" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d97706"/><stop offset="100%" stop-color="#b45309"/></linearGradient></defs>
+  <rect width="400" height="300" fill="#fef9f0"/>
+  <ellipse cx="200" cy="230" rx="140" ry="12" fill="#000" opacity="0.06"/>
+  <rect x="80" y="140" width="240" height="90" rx="6" fill="url(#b8)"/>
+  <rect x="76" y="134" width="248" height="12" rx="4" fill="#92400e"/>
+  <rect x="130" y="150" width="4" height="74" rx="2" fill="#92400e" opacity="0.3"/>
+  <rect x="190" y="150" width="4" height="74" rx="2" fill="#92400e" opacity="0.3"/>
+  <rect x="250" y="150" width="4" height="74" rx="2" fill="#92400e" opacity="0.3"/>
+  <rect x="100" y="125" width="16" height="14" rx="3" fill="#78350f"/>
+  <rect x="284" y="125" width="16" height="14" rx="3" fill="#78350f"/>
+  <text x="200" y="195" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="20" fill="#fef3c7">8m³</text>
+  <path d="M80 230 L80 236 L320 236 L320 230" fill="#78350f"/>
+</svg>

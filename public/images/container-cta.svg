@@ -1,0 +1,61 @@
+<svg viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Container body outline -->
+  <rect
+    x="10"
+    y="30"
+    width="180"
+    height="90"
+    rx="4"
+    stroke="white"
+    stroke-width="3"
+    stroke-dasharray="8 4"
+    fill="white"
+    fill-opacity="0.08"
+  />
+  <!-- Corrugated lines -->
+  <line x1="50" y1="36" x2="50" y2="114" stroke="white" stroke-opacity="0.2" stroke-width="1.5" />
+  <line x1="80" y1="36" x2="80" y2="114" stroke="white" stroke-opacity="0.2" stroke-width="1.5" />
+  <line x1="110" y1="36" x2="110" y2="114" stroke="white" stroke-opacity="0.2" stroke-width="1.5" />
+  <line x1="140" y1="36" x2="140" y2="114" stroke="white" stroke-opacity="0.2" stroke-width="1.5" />
+  <line x1="170" y1="36" x2="170" y2="114" stroke="white" stroke-opacity="0.2" stroke-width="1.5" />
+  <!-- Top rim -->
+  <rect
+    x="6"
+    y="26"
+    width="188"
+    height="8"
+    rx="2"
+    stroke="white"
+    stroke-width="2"
+    fill="white"
+    fill-opacity="0.12"
+  />
+  <!-- Lift hooks -->
+  <rect
+    x="40"
+    y="20"
+    width="16"
+    height="8"
+    rx="2"
+    fill="white"
+    fill-opacity="0.3"
+  />
+  <rect
+    x="144"
+    y="20"
+    width="16"
+    height="8"
+    rx="2"
+    fill="white"
+    fill-opacity="0.3"
+  />
+  <!-- Check mark -->
+  <circle cx="100" cy="75" r="20" fill="white" fill-opacity="0.15" />
+  <path
+    d="M90 75 L97 82 L112 67"
+    stroke="white"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

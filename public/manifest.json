@@ -1,0 +1,16 @@
+{
+  "name": "Boss Containers",
+  "short_name": "Boss",
+  "description": "Container rental in Brussels and surroundings",
+  "start_url": "/fr",
+  "display": "standalone",
+  "background_color": "#fef9f0",
+  "theme_color": "#d97706",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

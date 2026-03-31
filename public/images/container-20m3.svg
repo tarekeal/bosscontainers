@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs><linearGradient id="b20" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d97706"/><stop offset="100%" stop-color="#b45309"/></linearGradient></defs>
+  <rect width="400" height="300" fill="#fef9f0"/>
+  <ellipse cx="200" cy="235" rx="160" ry="14" fill="#000" opacity="0.06"/>
+  <rect x="50" y="120" width="300" height="115" rx="6" fill="url(#b20)"/>
+  <rect x="46" y="112" width="308" height="14" rx="4" fill="#92400e"/>
+  <rect x="100" y="132" width="5" height="97" rx="2" fill="#92400e" opacity="0.3"/>
+  <rect x="160" y="132" width="5" height="97" rx="2" fill="#92400e" opacity="0.3"/>
+  <rect x="220" y="132" width="5" height="97" rx="2" fill="#92400e" opacity="0.3"/>
+  <rect x="280" y="132" width="5" height="97" rx="2" fill="#92400e" opacity="0.3"/>
+  <rect x="74" y="100" width="18" height="16" rx="3" fill="#78350f"/>
+  <rect x="308" y="100" width="18" height="16" rx="3" fill="#78350f"/>
+  <text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="22" fill="#fef3c7">20m³</text>
+  <path d="M50 235 L50 242 L350 242 L350 235" fill="#78350f"/>
+</svg>
