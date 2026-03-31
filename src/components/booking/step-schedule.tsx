@@ -62,7 +62,7 @@ function AvailabilityCalendar({
 
   return (
     <div className="space-y-4">
-      <div className="grid grid-cols-7 gap-1.5 text-center">
+      <div className="grid grid-cols-7 gap-1 sm:gap-1.5 text-center">
         {weekdays.map((day, i) => (
           <div
             key={i}
@@ -73,7 +73,7 @@ function AvailabilityCalendar({
         ))}
       </div>
 
-      <div className="grid grid-cols-7 gap-1.5">
+      <div className="grid grid-cols-7 gap-1 sm:gap-1.5">
         {Array.from({ length: startOffset }, (_, i) => (
           <div key={`empty-${i}`} />
         ))}
@@ -102,10 +102,10 @@ function AvailabilityCalendar({
               aria-label={`${formatDate(day.date, locale)} - ${day.status}`}
               aria-pressed={isSelected}
             >
-              <span className="text-lg font-bold leading-tight">
+              <span className="text-sm sm:text-lg font-bold leading-tight">
                 {day.date.getDate()}
               </span>
-              <span className="text-[10px] leading-tight">
+              <span className="text-[9px] sm:text-[10px] leading-tight">
                 {day.date.toLocaleDateString(localeDateFormats[locale], {
                   weekday: "short",
                 })}
@@ -264,11 +264,11 @@ export function StepSchedule({ state, dict, locale, onRestart }: StepProps) {
       {selectedDate && selectedSlot && (
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Order summary */}
-          <div className="rounded-[var(--radius)] bg-primary/5 border border-primary/20 p-5">
+          <div className="rounded-[var(--radius)] bg-primary/5 border border-primary/20 p-4 sm:p-5">
             <h4 className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-3">
               {dict.booking.step4Title}
             </h4>
-            <div className="grid grid-cols-[auto_1fr] gap-y-2.5 gap-x-4 text-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-y-1.5 sm:gap-y-2.5 gap-x-4 text-sm">
               <span className="text-muted-foreground">Container</span>
               <span className="font-semibold">
                 {recommendedSize}m&sup3; &mdash; {translatedWasteName}

@@ -37,15 +37,15 @@ function StepIndicator({
   return (
     <div className="space-y-3">
       {/* Step dots with current label */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1 sm:gap-2">
         {Array.from({ length: totalSteps }, (_, i) => {
           const stepNum = i + 1;
           const isActive = stepNum === currentStep;
           const isComplete = stepNum < currentStep;
           return (
-            <div key={i} className="flex items-center gap-2">
+            <div key={i} className="flex items-center gap-1 sm:gap-2">
               <div
-                className={`flex size-8 shrink-0 items-center justify-center rounded-full text-xs font-bold transition-all ${
+                className={`flex size-7 sm:size-8 shrink-0 items-center justify-center rounded-full text-xs font-bold transition-all ${
                   isActive
                     ? "bg-primary text-primary-foreground scale-110"
                     : isComplete
@@ -55,7 +55,7 @@ function StepIndicator({
                 style={{ transitionDuration: "var(--duration-micro)" }}
               >
                 {isComplete ? (
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
                     <path
                       d="M3 8.5L6.5 12L13 4"
                       stroke="currentColor"
@@ -70,7 +70,7 @@ function StepIndicator({
               </div>
               {i < totalSteps - 1 && (
                 <div
-                  className={`h-0.5 w-4 sm:w-6 rounded-full ${
+                  className={`h-0.5 w-2 sm:w-6 rounded-full ${
                     isComplete ? "bg-primary/30" : "bg-muted"
                   }`}
                 />
@@ -135,16 +135,16 @@ export function BookingWizard({
   return (
     <Card className="w-full max-w-3xl mx-auto shadow-[var(--shadow-lg)] border-0">
       <CardHeader className="space-y-4 pb-2">
-        <div className="flex items-center justify-between">
-          <div>
-            <CardTitle className="text-2xl font-bold tracking-tight">
+        <div className="flex items-start justify-between gap-3">
+          <div className="min-w-0">
+            <CardTitle className="text-xl sm:text-2xl font-bold tracking-tight">
               {dict.booking.title}
             </CardTitle>
-            <CardDescription className="text-base">
+            <CardDescription className="text-sm sm:text-base">
               {dict.booking.subtitle}
             </CardDescription>
           </div>
-          <Badge variant="secondary" className="text-sm font-mono">
+          <Badge variant="secondary" className="text-sm font-mono shrink-0">
             {state.step}/{TOTAL_STEPS}
           </Badge>
         </div>

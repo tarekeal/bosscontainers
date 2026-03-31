@@ -49,46 +49,39 @@ export function StepRecommendation({ state, dict, onNext }: StepProps) {
       </div>
 
       {/* Primary recommendation card */}
-      <div className="rounded-[var(--radius)] border-2 border-primary bg-primary/5 p-5 space-y-4">
-        <div className="flex items-start gap-4">
-          <div className="shrink-0">
-            <img
-              src={getContainerImage(displaySize)}
-              alt=""
-              className="h-16 w-auto object-contain"
-              aria-hidden="true"
-            />
+      <div className="rounded-[var(--radius)] border-2 border-primary bg-primary/5 p-4 sm:p-5 space-y-4">
+        {/* Size + badge + price row */}
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-2xl font-bold">{displaySize}m&sup3;</span>
+            {displaySize === recommendedSize && (
+              <Badge className="bg-primary text-primary-foreground text-xs">
+                {dict.booking.recommended}
+              </Badge>
+            )}
           </div>
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 mb-1 flex-wrap">
-              <span className="text-2xl font-bold">{displaySize}m&sup3;</span>
-              {displaySize === recommendedSize && (
-                <Badge className="bg-primary text-primary-foreground text-xs">
-                  {dict.booking.recommended}
-                </Badge>
-              )}
-            </div>
-            <p className="text-sm text-muted-foreground">{sizeDesc}</p>
-            {/* Proportional bar */}
-            <div className="h-2 w-full rounded-full bg-muted overflow-hidden mt-2">
-              <div
-                className="h-full rounded-full bg-primary transition-all"
-                style={{
-                  width: `${(displaySize / 30) * 100}%`,
-                  transitionDuration: "var(--duration-micro)",
-                }}
-              />
-            </div>
-          </div>
-          <div className="shrink-0 text-right">
-            <p className="text-2xl font-bold text-primary tabular-nums">
+          {displayPrice !== null && (
+            <p className="text-2xl font-bold text-primary tabular-nums shrink-0">
               &euro;{displayPrice}
             </p>
-            <p className="text-xs text-muted-foreground">
-              {dict.booking.exclVat}
-            </p>
-          </div>
+          )}
         </div>
+
+        {/* Description */}
+        <p className="text-sm text-muted-foreground">{sizeDesc}</p>
+
+        {/* Proportional bar */}
+        <div className="h-2 w-full rounded-full bg-muted overflow-hidden">
+          <div
+            className="h-full rounded-full bg-primary transition-all"
+            style={{
+              width: `${(displaySize / 30) * 100}%`,
+              transitionDuration: "var(--duration-micro)",
+            }}
+          />
+        </div>
+
+        <p className="text-xs text-muted-foreground">{dict.booking.exclVat}</p>
 
         {/* Back to recommended — only shown when user picked an alternative */}
         {selectedSize !== null && selectedSize !== recommendedSize && (
